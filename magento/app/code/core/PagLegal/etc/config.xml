@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Mage_PagLegal>
+      <version>1.0.0.0</version>
+    </Mage_PagLegal>
+  </modules>
+ 
+  <global>
+    <fieldsets>
+      <sales_convert_quote_payment>
+        <cpf>
+          <to_order_payment>*</to_order_payment>
+        </cpf>
+      </sales_convert_quote_payment>
+    </fieldsets>
+     
+    <helpers>
+      <paglegal>
+        <class>Mage_PagLegal_Helper</class>
+      </paglegal>
+    </helpers>
+ 
+    <blocks>
+      <paglegal>
+        <class>Mage_PagLegal_Block</class>
+      </paglegal>
+    </blocks>
+         
+    <models>
+      <paglegal>
+        <class>Mage_PagLegal_Model</class>
+      </paglegal>
+    </models>
+ 
+    <resources>
+      <paglegal_setup>
+        <setup>
+          <module>Mage_PagLegal</module>
+        </setup>
+      </paglegal_setup>
+    </resources>
+  </global>
+ 
+  <default>
+    <payment>
+      <paglegal>
+        <active>1</active>
+        <model>paglegal/paymentmethod</model>
+        <order_status>pending</order_status>
+        <title>PagLegal</title>
+        <allowspecific>0</allowspecific>
+        <payment_action>sale</payment_action>
+      </paglegal>
+    </payment>
+  </default>
+   
+  <frontend>
+    <routers>
+      <paglegal>
+        <use>standard</use>
+        <args>
+          <module>Mage_PagLegal</module>
+          <frontName>paglegal</frontName>
+        </args>
+      </paglegal>
+    </routers>
+  </frontend>
+</config>

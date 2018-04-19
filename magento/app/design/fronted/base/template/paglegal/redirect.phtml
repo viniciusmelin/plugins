@@ -1,0 +1,11 @@
+<?php
+$order = new Mage_Sales_Model_Order();
+$orderId = Mage::getSingleton('checkout/session')->getLastRealOrderId();
+$order->loadByIncrementId($orderId);
+?>
+<h2><?php echo $this->__('PagLegal Payment Gateway') ?></h2>
+<p>PagLegal meio de pagamento demonstrativo :-)</p>
+<form name="paglegal" method="post" action="<?php echo Mage::helper('paglegal')->getPaymentGatewayUrl(); ?>">
+  <input type="hidden" name="orderId" value="<?php echo $orderId; ?>">
+  <input type="submit" value="<?php echo $this->__('Make Payment') ?>" />
+</form>
