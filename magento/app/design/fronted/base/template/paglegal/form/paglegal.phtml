@@ -1,15 +1,11 @@
 <div class="form-list" id="payment_form_<?php echo $this->getMethodCode() ?>" style="display:none;">
   <div>
-    <label><?php echo $this->__('Custom Field One') ?>*</label>
+    <label><?php echo $this->__('CPF') ?>*</label>
     <span>
-      <input type="text" title="<?php echo $this->__('Custom Field One') ?>" name="payment[custom_field_one]" value="<?php echo $this->htmlEscape($this->getInfoData('custom_field_one')) ?>" />
+      <input type="text" title="<?php echo $this->__('CPF') ?>" name="payment[cpf]" value="<?php echo $this->htmlEscape($this->getInfoData('cpf')) ?>" />
     </span>
   </div>
   <div>
-    <label><?php echo $this->__('Custom Field Two') ?>*</label>
-    <span>
-      <input type="text" title="<?php echo $this->__('Custom Field Two') ?>" name="payment[custom_field_two]" value="<?php echo $this->htmlEscape($this->getInfoData('custom_field_two')) ?>" />
-    </span>
   </div>
 </div>
 <div>

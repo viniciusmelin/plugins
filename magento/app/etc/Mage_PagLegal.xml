@@ -4,7 +4,6 @@
         <Mage_PagLegal>
             <active>true</active>
             <codePool>core</codePool>
-
         </Mage_PagLegal>
     </modules>
 </config>
